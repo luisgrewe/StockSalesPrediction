@@ -9,6 +9,14 @@ A high-performance machine learning pipeline for predicting weekly retail sales 
 
 This engine focuses on forecasting demand at the granular **store-product level**. By analyzing historical data (2022–2024), it predicts sales for the first quarter of 2025.
 
+## Getting Started
+
+1. **Clone the repository**:
+   `git clone https://github.com/luisgrewe/StockSalesPrediction.git`
+
+2. **Be aware of your data the Data**:
+   Locate the train and test sets from in a simple `data` folder.
+
 ## Package Management with `uv`
 
 This project uses [uv](https://docs.astral.sh/uv/) for high-performance dependency management. Below are the essential commands to get the environment running.
