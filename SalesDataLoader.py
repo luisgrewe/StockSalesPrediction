@@ -80,6 +80,10 @@ class SalesDataLoader:
             lambda x: x.shift(15).mean()
         )
 
+        df['sales_log_return'] = grouper.transform(
+            lambda x: np.log1p(x.shift(15)) - np.log1p(x.shift(16))
+        )
+
         # Relative Performance
         df['perf_vs_store'] = df['sales_lag_15'] / (df['store_seasonal_avg'] + 1e-6)
 
