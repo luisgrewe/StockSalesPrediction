@@ -25,7 +25,7 @@ class SalesDataLoader:
 
         return {'train': train_df, 'test': test_df}
 
-    def preprocessing(self, df, is_test=False):
+    def preprocessing(self, df):
         """Handles time feature extraction, missing values, and sorting."""
         df = df.copy()
         df[self.__date_col] = pd.to_datetime(df[self.__date_col])
@@ -38,11 +38,7 @@ class SalesDataLoader:
         df['week_of_year'] = df[self.__date_col].dt.isocalendar().week.astype(int)
         df['year'] = df[self.__date_col].dt.year
 
-        if not is_test:
-            df[self.__target_col] = df[self.__target_col].fillna(0)
-        else:
-            if self.__target_col in df.columns:
-                df = df.drop(columns=[self.__target_col])
+        df[self.__target_col] = df[self.__target_col].fillna(0)
 
         return df.reset_index(drop=True)
 
