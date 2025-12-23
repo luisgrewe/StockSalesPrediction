@@ -33,11 +33,13 @@ class SalesDataLoader:
         # Sort to ensure time-series consistency
         df = df.sort_values(by=self.__id_cols + [self.__date_col])
 
+        #Time-Series Consistency
         df[self.__date_col] = df[self.__date_col] - pd.to_timedelta(df[self.__date_col].dt.weekday, unit='D')
+
         # Time Features
         df['month'] = df[self.__date_col].dt.month
         df['week_of_year'] = df[self.__date_col].dt.isocalendar().week.astype(int)
-        df['year'] = df[self.__date_col].dt.year
+        df['year'] = df[self.__date_col].dt.isocalendar().year.astype(int)
 
         df[self.__target_col] = df[self.__target_col].fillna(0)
 
