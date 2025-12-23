@@ -3,11 +3,11 @@
 [![python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
-A high-performance machine learning pipeline for predicting weekly retail sales volume. This project leverages a 15-week forecast horizon and hierarchical feature engineering to ensure supply chain decisions.
+A machine learning pipeline for predicting weekly retail sales volume. This project leverages a 15-week forecast horizon and hierarchical feature engineering to ensure supply chain decisions.
 
 ## Project Overview
 
-This engine focuses on forecasting demand at the granular **store-product level**. By analyzing historical data (2022–2024), it predicts sales for the first quarter of 2025.
+It focuses on forecasting demand at the granular **store-product level**. By analyzing historical data (2022–2024), it predicts sales for the first quarter of 2025.
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ This engine focuses on forecasting demand at the granular **store-product level*
    `git clone https://github.com/luisgrewe/StockSalesPrediction.git`
 
 2. **Be aware of your data the Data**:
-   Locate the train and test sets from in a simple `data` folder.
+   Locate the train and test sets in a simple `data` folder.
 
 ## Package Management with `uv`
 
@@ -37,3 +37,13 @@ Once `uv` is installed, navigate to the project root and run:
 ```bash
 # Initialize the project, create .venv, and install dependencies
 uv sync
+```
+To activate your environment, run the following comand:
+
+| Platform | Activation Command |
+| :--- | :--- |
+| **macOS / Linux** | `source .venv/bin/activate` |
+| **Windows (PowerShell)** | `.venv\Scripts\activate` |
+
+---
+Finally, you can run the ```salesprediction.ipynb``` file!
