@@ -87,6 +87,12 @@ class SalesDataLoader:
             lambda x: np.log1p(x.shift(15)) - np.log1p(x.shift(16))
         )
 
+        # Sales Product Share per Store in a Week
+        store_weekly_total = df.groupby(['store_number', self.__date_col])[self.__target_col].transform(
+            lambda x: x.shift(15).sum())
+
+        df['prod_store_share'] = df['sales_lag_15'] / (store_weekly_total + 1e-6)
+
         # Relative Performance
         df['perf_vs_store'] = df['sales_lag_15'] / (df['store_seasonal_avg'] + 1e-6)
 
