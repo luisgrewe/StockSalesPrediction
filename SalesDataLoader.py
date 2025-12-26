@@ -28,12 +28,13 @@ class SalesDataLoader:
     def preprocessing(self, df):
         """Handles time feature extraction, missing values, and sorting."""
         df = df.copy()
+        df = df.drop(columns=["format"], errors="ignore")
         df[self.__date_col] = pd.to_datetime(df[self.__date_col])
 
         # Sort to ensure time-series consistency
         df = df.sort_values(by=self.__id_cols + [self.__date_col])
 
-        #Time-Series Consistency
+        # Time-Series Consistency
         df[self.__date_col] = df[self.__date_col] - pd.to_timedelta(df[self.__date_col].dt.weekday, unit='D')
 
         # Time Features
