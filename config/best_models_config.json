@@ -1,0 +1,46 @@
+{
+    "metadata": {
+        "experiment_date": "2025-12-29",
+        "overall_winner": "XGBoost",
+        "best_rmse": 5.1243,
+        "n_trials": 100
+    },
+    "models": {
+        "XGBoost": {
+            "rmse": 5.1243,
+            "best_ntree": 548,
+            "params": {
+                "learning_rate": 0.017540038390938303,
+                "max_depth": 3,
+                "reg_lambda": 0.022968332223360245,
+                "n_estimators": 548,
+                "tree_method": "hist",
+                "random_state": 42
+            }
+        },
+        "CatBoost": {
+            "rmse": 5.2240,
+            "best_ntree": 317,
+            "params": {
+                "learning_rate": 0.016049103029681593,
+                "depth": 7,
+                "l2_leaf_reg": 0.013120526722841535,
+                "iterations": 317,
+                "random_seed": 42,
+                "verbose": false
+            }
+        },
+        "LightGBM": {
+            "rmse": 5.3060,
+            "best_ntree": 622,
+            "params": {
+                "learning_rate": 0.011166986161146543,
+                "max_depth": 3,
+                "reg_lambda": 2.564938074099862,
+                "n_estimators": 622,
+                "random_state": 42,
+                "verbose": -1
+            }
+        }
+    }
+}
