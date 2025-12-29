@@ -31,7 +31,7 @@ If you don't have `uv` installed, run the following command for your OS:
 
 ---
 
-### 2. Environment Setup
+### Environment Setup
 Once `uv` is installed, navigate to the project root and run:
 
 ```bash
