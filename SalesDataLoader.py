@@ -100,6 +100,13 @@ class SalesDataLoader:
         # Year-over-Year Growth Rate
         df['yoy_growth'] = df['sales_lag_15'] / (df['sales_lag_52'] + 1e-6)
 
+        # Support-End Date
+        win10_eol = pd.Timestamp('2025-10-14')
+        df['weeks_to_eol'] = ((win10_eol - df['week']).dt.days // 7)
+
+        # Weeks after CES (Weeks 2 to 6)
+        df['is_post_ces_launch'] = df['week_of_year'].apply(lambda x: 1 if 2 <= x <= 6 else 0)
+
         return df
 
     def prepare_test_features(self, df_train, df_test):

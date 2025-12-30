@@ -1,43 +1,43 @@
 {
     "metadata": {
-        "experiment_date": "2025-12-29",
+        "experiment_date": "2025-12-30",
         "overall_winner": "XGBoost",
-        "best_rmse": 5.1243,
-        "n_trials": 100
+        "best_rmse": 5.1357,
+        "notes": "Optimized for 15-week Q1 horizon with higher regularization for stability"
     },
     "models": {
         "XGBoost": {
-            "rmse": 5.1243,
-            "best_ntree": 548,
+            "rmse": 5.1357,
+            "best_ntree": 286,
             "params": {
-                "learning_rate": 0.017540038390938303,
+                "n_estimators": 900,
+                "learning_rate": 0.03186701372700087,
                 "max_depth": 3,
-                "reg_lambda": 0.022968332223360245,
-                "n_estimators": 548,
+                "reg_lambda": 0.12307437091150934,
                 "tree_method": "hist",
                 "random_state": 42
             }
         },
         "CatBoost": {
-            "rmse": 5.2240,
-            "best_ntree": 317,
+            "rmse": 5.2154,
+            "best_ntree": 62,
             "params": {
-                "learning_rate": 0.016049103029681593,
+                "iterations": 100,
+                "learning_rate": 0.09330606024425668,
                 "depth": 7,
-                "l2_leaf_reg": 0.013120526722841535,
-                "iterations": 317,
+                "l2_leaf_reg": 0.04335281794951565,
                 "random_seed": 42,
                 "verbose": false
             }
         },
         "LightGBM": {
-            "rmse": 5.3060,
-            "best_ntree": 622,
+            "rmse": 5.2444,
+            "best_ntree": 228,
             "params": {
-                "learning_rate": 0.011166986161146543,
+                "n_estimators": 1200,
+                "learning_rate": 0.05638688465994504,
                 "max_depth": 3,
-                "reg_lambda": 2.564938074099862,
-                "n_estimators": 622,
+                "reg_lambda": 0.12593120638453528,
                 "random_state": 42,
                 "verbose": -1
             }
