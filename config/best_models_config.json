@@ -2,8 +2,7 @@
     "metadata": {
         "experiment_date": "2025-12-30",
         "overall_winner": "XGBoost",
-        "best_rmse": 5.1357,
-        "notes": "Optimized for 15-week Q1 horizon with higher regularization for stability"
+        "best_rmse": 5.1357
     },
     "models": {
         "XGBoost": {
