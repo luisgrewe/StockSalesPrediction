@@ -7,7 +7,7 @@ A machine learning pipeline for predicting weekly retail sales volume. This proj
 
 ## Project Overview
 
-It focuses on forecasting demand at the granular **store-product level**. By analyzing historical data (2022–2024), it predicts sales for the first quarter of 2025.
+It focuses on forecasting demand at the granular **store-product level**. By analyzing historical data (2022–2024), it predicts sales for the first 15 weeks of 2025.
 
 ## Getting Started
 

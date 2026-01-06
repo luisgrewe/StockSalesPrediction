@@ -1,26 +1,24 @@
-# --- Python / Virtual Environments ---
+# Virtual Environments
 .venv/
 __pycache__/
 *.py[cod]
 *$py.class
 .env
 
-# --- Project Specific Data ---
-# Ignores all files in the data folder
+# Project Specific Data
 data/
-# Or ignore specific extensions if they are in the root
+# Ignore specific extensions
 *.csv
 *.xlsx
 *.xls
 
-# --- uv / Development ---
-# We keep pyproject.toml and uv.lock, but ignore local tool settings
+# Development
 .python-version
 
-# --- IDEs ---
+# IDEs
 .vscode/
 .idea/
 
-# --- OS Specific ---
+# OS Specific
 .DS_Store
 Thumbs.db
