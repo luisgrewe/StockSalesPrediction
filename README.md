@@ -1,6 +1,6 @@
 # Retail Sales Forecasting Engine
 
-[![python](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![python](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
 A machine learning pipeline for predicting weekly retail sales volume. This project leverages a 15-week forecast horizon and hierarchical feature engineering to ensure supply chain decisions.
